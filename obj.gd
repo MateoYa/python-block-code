@@ -27,6 +27,6 @@ func _on_button_button_up() -> void:
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if dragging:
 		print("hello")
-		cnct = area.get_parent().get_parent().position 
-		cnct = cnct - Vector2(327, 100)
-		print(position)
+		#cnct = area.get_parent().get_parent().position 
+		#cnct = cnct - Vector2(327, 100)
+		#print(position)

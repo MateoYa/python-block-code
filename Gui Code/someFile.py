@@ -1,2 +1,3 @@
 print('hello')
-input()
+x = input()
+print(x)

@@ -77,7 +77,7 @@ shape = SubResource("RectangleShape2D_rew8r")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(588, 0)
+position = Vector2(278, 0)
 texture = SubResource("PlaceholderTexture2D_mkcfh")
 script = ExtResource("3_g8gns")
 
@@ -92,7 +92,7 @@ offset_left = -74.5
 offset_top = -65.509
 offset_right = 66.5
 offset_bottom = 72.491
-text = "input()"
+text = "x = input()"
 
 [node name="Area2D" type="Area2D" parent="Sprite2D2"]
 
@@ -118,6 +118,49 @@ offset_bottom = 88.0
 position = Vector2(-2.5, 70)
 shape = SubResource("RectangleShape2D_rew8r")
 
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(608, 12)
+texture = SubResource("PlaceholderTexture2D_mkcfh")
+script = ExtResource("3_g8gns")
+
+[node name="Button" type="Button" parent="Sprite2D3"]
+modulate = Color(0.238754, 0.548478, 1, 1)
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 3.509
+anchor_right = 0.5
+anchor_bottom = 3.509
+offset_left = -122.5
+offset_top = -65.509
+offset_right = 111.5
+offset_bottom = 72.491
+text = "print(x)"
+
+[node name="Area2D" type="Area2D" parent="Sprite2D3"]
+
+[node name="ColorRect" type="ColorRect" parent="Sprite2D3/Area2D"]
+offset_left = -22.0
+offset_top = -87.0
+offset_right = 18.0
+offset_bottom = -47.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D3/Area2D"]
+position = Vector2(1.5, -65)
+shape = SubResource("RectangleShape2D_2s00n")
+
+[node name="Area2D2" type="Area2D" parent="Sprite2D3"]
+
+[node name="ColorRect" type="ColorRect" parent="Sprite2D3/Area2D2"]
+offset_left = -22.0
+offset_top = 48.0
+offset_right = 18.0
+offset_bottom = 88.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D3/Area2D2"]
+position = Vector2(-2.5, 70)
+shape = SubResource("RectangleShape2D_rew8r")
+
 [connection signal="button_down" from="Control/Button" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="Control/Button" to="Control" method="_on_button_button_down"]
 [connection signal="button_down" from="Sprite2D/Button" to="Sprite2D" method="_on_button_button_down"]
@@ -128,3 +171,7 @@ shape = SubResource("RectangleShape2D_rew8r")
 [connection signal="button_up" from="Sprite2D2/Button" to="Sprite2D2" method="_on_button_button_up"]
 [connection signal="area_entered" from="Sprite2D2/Area2D" to="Sprite2D2" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Sprite2D2/Area2D2" to="Sprite2D2" method="_on_area_2d_area_entered"]
+[connection signal="button_down" from="Sprite2D3/Button" to="Sprite2D3" method="_on_button_button_down"]
+[connection signal="button_up" from="Sprite2D3/Button" to="Sprite2D3" method="_on_button_button_up"]
+[connection signal="area_entered" from="Sprite2D3/Area2D" to="Sprite2D3" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Sprite2D3/Area2D2" to="Sprite2D3" method="_on_area_2d_area_entered"]
