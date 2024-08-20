@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://87kh4wmnc4jw"]
+
+[ext_resource type="Script" path="res://pythonConverter.gd" id="1_j74sq"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_j74sq")
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 101.0
+offset_right = 644.0
+offset_bottom = 288.0
+text = "thing"
+
+[connection signal="button_down" from="Control/Button" to="Control" method="_on_button_button_down"]

@@ -10,6 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Python Block Code"
+config/name="Python_Block_Code"
+run/main_scene="res://pythonCode.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
